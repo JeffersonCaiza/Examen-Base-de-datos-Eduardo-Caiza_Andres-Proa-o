@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.7.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.7.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\train.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+          <parameter key="80" value="SalePrice.true.integer.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="h2o:gradient_boosted_trees" compatibility="9.7.001" expanded="true" height="103" name="Gradient Boosted Trees" width="90" x="179" y="34">
+        <parameter key="number_of_trees" value="50"/>
+        <parameter key="reproducible" value="false"/>
+        <parameter key="maximum_number_of_threads" value="4"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="maximal_depth" value="5"/>
+        <parameter key="min_rows" value="10.0"/>
+        <parameter key="min_split_improvement" value="1.0E-5"/>
+        <parameter key="number_of_bins" value="20"/>
+        <parameter key="learning_rate" value="0.01"/>
+        <parameter key="sample_rate" value="1.0"/>
+        <parameter key="distribution" value="AUTO"/>
+        <parameter key="early_stopping" value="false"/>
+        <parameter key="stopping_rounds" value="1"/>
+        <parameter key="stopping_metric" value="AUTO"/>
+        <parameter key="stopping_tolerance" value="0.001"/>
+        <list key="monotone_constraints"/>
+        <parameter key="max_runtime_seconds" value="0"/>
+        <list key="expert_parameters"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (2)" width="90" x="45" y="136">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\test.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.7.001" expanded="true" height="82" name="Apply Model Gradient Bosted" width="90" x="313" y="85">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.7.001" expanded="true" height="124" name="Multiply" width="90" x="447" y="34"/>
+      <operator activated="true" class="write_csv" compatibility="9.7.001" expanded="true" height="82" name="Write CSV" width="90" x="581" y="136">
+        <parameter key="csv_file" value="C:/Users/Personal/Documents/5 semestre Andres/base de datos/Examan-BD-Multidimensionales/testMgradient.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="jdbc_connectors:write_database" compatibility="9.7.001" expanded="true" height="82" name="Write Database" width="90" x="849" y="136">
+        <parameter key="define_connection" value="repository"/>
+        <parameter key="connection_entry" value="//Local Repository/Connections/testMgradient"/>
+        <parameter key="database_system" value="MySQL"/>
+        <parameter key="use_default_schema" value="true"/>
+        <parameter key="table_name" value="testMgradient"/>
+        <parameter key="overwrite_mode" value="none"/>
+        <parameter key="set_default_varchar_length" value="false"/>
+        <parameter key="default_varchar_length" value="128"/>
+        <parameter key="add_generated_primary_keys" value="false"/>
+        <parameter key="db_key_attribute_name" value="generated_primary_key"/>
+        <parameter key="batch_size" value="100"/>
+      </operator>
+      <operator activated="true" class="text:data_to_json" compatibility="9.3.001" expanded="true" height="82" name="Data To JSON (3)" width="90" x="715" y="34">
+        <parameter key="ignore_arrays" value="false"/>
+        <parameter key="generate_array" value="false"/>
+        <parameter key="include_missing_values" value="false"/>
+      </operator>
+      <operator activated="true" class="nosql:mongodb_document_writer" compatibility="9.6.000" expanded="true" height="103" name="Write MongoDB" width="90" x="849" y="34">
+        <parameter key="connection_source" value="repository"/>
+        <parameter key="connection_entry" value="//Local Repository/Connections/test"/>
+        <parameter key="write_concern_" value="Acknowledged"/>
+        <parameter key="write_concern" value="Acknowledged"/>
+        <parameter key="collection" value="testMgradient"/>
+        <parameter key="skip_invalid_documents" value="false"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (3)" width="90" x="45" y="289">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\train.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+          <parameter key="80" value="SalePrice.true.integer.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="h2o:generalized_linear_model" compatibility="9.7.001" expanded="true" height="124" name="Generalized Linear Model (2)" width="90" x="179" y="238">
+        <parameter key="family" value="AUTO"/>
+        <parameter key="link" value="family_default"/>
+        <parameter key="solver" value="AUTO"/>
+        <parameter key="reproducible" value="false"/>
+        <parameter key="maximum_number_of_threads" value="4"/>
+        <parameter key="use_regularization" value="true"/>
+        <parameter key="lambda_search" value="false"/>
+        <parameter key="number_of_lambdas" value="0"/>
+        <parameter key="lambda_min_ratio" value="0.0"/>
+        <parameter key="early_stopping" value="true"/>
+        <parameter key="stopping_rounds" value="3"/>
+        <parameter key="stopping_tolerance" value="0.001"/>
+        <parameter key="standardize" value="true"/>
+        <parameter key="non-negative_coefficients" value="false"/>
+        <parameter key="add_intercept" value="true"/>
+        <parameter key="compute_p-values" value="false"/>
+        <parameter key="remove_collinear_columns" value="false"/>
+        <parameter key="missing_values_handling" value="MeanImputation"/>
+        <parameter key="max_iterations" value="0"/>
+        <parameter key="specify_beta_constraints" value="false"/>
+        <list key="beta_constraints"/>
+        <parameter key="max_runtime_seconds" value="0"/>
+        <list key="expert_parameters"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (4)" width="90" x="45" y="391">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\test.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.7.001" expanded="true" height="82" name="Apply Model Generalizaed Linear" width="90" x="313" y="238">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.7.001" expanded="true" height="124" name="Multiply (2)" width="90" x="447" y="238"/>
+      <operator activated="true" class="write_csv" compatibility="9.7.001" expanded="true" height="82" name="Write CSV (2)" width="90" x="581" y="340">
+        <parameter key="csv_file" value="C:/Users/Personal/Documents/5 semestre Andres/base de datos/Examan-BD-Multidimensionales/testMgeneralizedlinear.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="jdbc_connectors:write_database" compatibility="9.7.001" expanded="true" height="82" name="Write Database (2)" width="90" x="849" y="340">
+        <parameter key="define_connection" value="repository"/>
+        <parameter key="connection_entry" value="//Local Repository/Connections/testMgeneralized"/>
+        <parameter key="database_system" value="MySQL"/>
+        <parameter key="use_default_schema" value="true"/>
+        <parameter key="table_name" value="testMgeneralized"/>
+        <parameter key="overwrite_mode" value="none"/>
+        <parameter key="set_default_varchar_length" value="false"/>
+        <parameter key="default_varchar_length" value="128"/>
+        <parameter key="add_generated_primary_keys" value="false"/>
+        <parameter key="db_key_attribute_name" value="generated_primary_key"/>
+        <parameter key="batch_size" value="100"/>
+      </operator>
+      <operator activated="true" class="text:data_to_json" compatibility="9.3.001" expanded="true" height="82" name="Data To JSON (2)" width="90" x="715" y="238">
+        <parameter key="ignore_arrays" value="false"/>
+        <parameter key="generate_array" value="false"/>
+        <parameter key="include_missing_values" value="false"/>
+      </operator>
+      <operator activated="true" class="nosql:mongodb_document_writer" compatibility="9.6.000" expanded="true" height="103" name="Write MongoDB (2)" width="90" x="849" y="238">
+        <parameter key="connection_source" value="repository"/>
+        <parameter key="connection_entry" value="//Local Repository/Connections/test"/>
+        <parameter key="write_concern_" value="Acknowledged"/>
+        <parameter key="write_concern" value="Acknowledged"/>
+        <parameter key="collection" value="testMgeneralized"/>
+        <parameter key="skip_invalid_documents" value="false"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (5)" width="90" x="45" y="493">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\train.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+          <parameter key="80" value="SalePrice.true.integer.label"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="h2o:deep_learning" compatibility="9.7.001" expanded="true" height="103" name="Deep Learning" width="90" x="179" y="493">
+        <parameter key="activation" value="Rectifier"/>
+        <enumeration key="hidden_layer_sizes">
+          <parameter key="hidden_layer_sizes" value="50"/>
+          <parameter key="hidden_layer_sizes" value="50"/>
+        </enumeration>
+        <enumeration key="hidden_dropout_ratios"/>
+        <parameter key="reproducible_(uses_1_thread)" value="false"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="epochs" value="10.0"/>
+        <parameter key="compute_variable_importances" value="false"/>
+        <parameter key="train_samples_per_iteration" value="-2"/>
+        <parameter key="adaptive_rate" value="true"/>
+        <parameter key="epsilon" value="1.0E-8"/>
+        <parameter key="rho" value="0.99"/>
+        <parameter key="learning_rate" value="0.005"/>
+        <parameter key="learning_rate_annealing" value="1.0E-6"/>
+        <parameter key="learning_rate_decay" value="1.0"/>
+        <parameter key="momentum_start" value="0.0"/>
+        <parameter key="momentum_ramp" value="1000000.0"/>
+        <parameter key="momentum_stable" value="0.0"/>
+        <parameter key="nesterov_accelerated_gradient" value="true"/>
+        <parameter key="standardize" value="true"/>
+        <parameter key="L1" value="1.0E-5"/>
+        <parameter key="L2" value="0.0"/>
+        <parameter key="max_w2" value="10.0"/>
+        <parameter key="loss_function" value="Automatic"/>
+        <parameter key="distribution_function" value="AUTO"/>
+        <parameter key="early_stopping" value="false"/>
+        <parameter key="stopping_rounds" value="1"/>
+        <parameter key="stopping_metric" value="AUTO"/>
+        <parameter key="stopping_tolerance" value="0.001"/>
+        <parameter key="missing_values_handling" value="MeanImputation"/>
+        <parameter key="max_runtime_seconds" value="0"/>
+        <list key="expert_parameters"/>
+        <list key="expert_parameters_"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (6)" width="90" x="45" y="595">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\examen\test.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="apply_model" compatibility="9.7.001" expanded="true" height="82" name="Apply Model Deep Learning" width="90" x="313" y="493">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.7.001" expanded="true" height="124" name="Multiply (3)" width="90" x="447" y="442"/>
+      <operator activated="true" class="write_csv" compatibility="9.7.001" expanded="true" height="82" name="Write CSV (3)" width="90" x="581" y="544">
+        <parameter key="csv_file" value="C:/Users/Personal/Documents/5 semestre Andres/base de datos/Examan-BD-Multidimensionales/testMdeeplearning.csv"/>
+        <parameter key="column_separator" value=";"/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="true" class="jdbc_connectors:write_database" compatibility="9.7.001" expanded="true" height="82" name="Write Database (3)" width="90" x="849" y="544">
+        <parameter key="define_connection" value="repository"/>
+        <parameter key="connection_entry" value="//Local Repository/Connections/testMdeeplearn"/>
+        <parameter key="database_system" value="MySQL"/>
+        <parameter key="use_default_schema" value="true"/>
+        <parameter key="table_name" value="testMdeeplearning"/>
+        <parameter key="overwrite_mode" value="none"/>
+        <parameter key="set_default_varchar_length" value="false"/>
+        <parameter key="default_varchar_length" value="128"/>
+        <parameter key="add_generated_primary_keys" value="false"/>
+        <parameter key="db_key_attribute_name" value="generated_primary_key"/>
+        <parameter key="batch_size" value="100"/>
+      </operator>
+      <operator activated="true" class="text:data_to_json" compatibility="9.3.001" expanded="true" height="82" name="Data To JSON" width="90" x="715" y="442">
+        <parameter key="ignore_arrays" value="false"/>
+        <parameter key="generate_array" value="false"/>
+        <parameter key="include_missing_values" value="false"/>
+      </operator>
+      <operator activated="true" class="nosql:mongodb_document_writer" compatibility="9.6.000" expanded="true" height="103" name="Write MongoDB (3)" width="90" x="849" y="442">
+        <parameter key="connection_source" value="repository"/>
+        <parameter key="connection_entry" value="/Connections/test"/>
+        <parameter key="write_concern_" value="Acknowledged"/>
+        <parameter key="write_concern" value="Acknowledged"/>
+        <parameter key="collection" value="testMdeeplearning"/>
+        <parameter key="skip_invalid_documents" value="false"/>
+      </operator>
+      <operator activated="true" class="read_csv" compatibility="9.7.001" expanded="true" height="68" name="Read CSV (7)" width="90" x="45" y="748">
+        <parameter key="csv_file" value="C:\Users\Personal\Documents\5 semestre Andres\base de datos\Examan-BD-Multidimensionales\train.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Id.true.integer.attribute"/>
+          <parameter key="1" value="MSSubClass.true.integer.attribute"/>
+          <parameter key="2" value="MSZoning.true.polynominal.attribute"/>
+          <parameter key="3" value="LotFrontage.true.polynominal.attribute"/>
+          <parameter key="4" value="LotArea.true.integer.attribute"/>
+          <parameter key="5" value="Street.true.polynominal.attribute"/>
+          <parameter key="6" value="Alley.true.polynominal.attribute"/>
+          <parameter key="7" value="LotShape.true.polynominal.attribute"/>
+          <parameter key="8" value="LandContour.true.polynominal.attribute"/>
+          <parameter key="9" value="Utilities.true.polynominal.attribute"/>
+          <parameter key="10" value="LotConfig.true.polynominal.attribute"/>
+          <parameter key="11" value="LandSlope.true.polynominal.attribute"/>
+          <parameter key="12" value="Neighborhood.true.polynominal.attribute"/>
+          <parameter key="13" value="Condition1.true.polynominal.attribute"/>
+          <parameter key="14" value="Condition2.true.polynominal.attribute"/>
+          <parameter key="15" value="BldgType.true.polynominal.attribute"/>
+          <parameter key="16" value="HouseStyle.true.polynominal.attribute"/>
+          <parameter key="17" value="OverallQual.true.integer.attribute"/>
+          <parameter key="18" value="OverallCond.true.integer.attribute"/>
+          <parameter key="19" value="YearBuilt.true.integer.attribute"/>
+          <parameter key="20" value="YearRemodAdd.true.integer.attribute"/>
+          <parameter key="21" value="RoofStyle.true.polynominal.attribute"/>
+          <parameter key="22" value="RoofMatl.true.polynominal.attribute"/>
+          <parameter key="23" value="Exterior1st.true.polynominal.attribute"/>
+          <parameter key="24" value="Exterior2nd.true.polynominal.attribute"/>
+          <parameter key="25" value="MasVnrType.true.polynominal.attribute"/>
+          <parameter key="26" value="MasVnrArea.true.integer.attribute"/>
+          <parameter key="27" value="ExterQual.true.polynominal.attribute"/>
+          <parameter key="28" value="ExterCond.true.polynominal.attribute"/>
+          <parameter key="29" value="Foundation.true.polynominal.attribute"/>
+          <parameter key="30" value="BsmtQual.true.polynominal.attribute"/>
+          <parameter key="31" value="BsmtCond.true.polynominal.attribute"/>
+          <parameter key="32" value="BsmtExposure.true.polynominal.attribute"/>
+          <parameter key="33" value="BsmtFinType1.true.polynominal.attribute"/>
+          <parameter key="34" value="BsmtFinSF1.true.integer.attribute"/>
+          <parameter key="35" value="BsmtFinType2.true.polynominal.attribute"/>
+          <parameter key="36" value="BsmtFinSF2.true.integer.attribute"/>
+          <parameter key="37" value="BsmtUnfSF.true.integer.attribute"/>
+          <parameter key="38" value="TotalBsmtSF.true.integer.attribute"/>
+          <parameter key="39" value="Heating.true.polynominal.attribute"/>
+          <parameter key="40" value="HeatingQC.true.polynominal.attribute"/>
+          <parameter key="41" value="CentralAir.true.polynominal.attribute"/>
+          <parameter key="42" value="Electrical.true.polynominal.attribute"/>
+          <parameter key="43" value="1stFlrSF.true.integer.attribute"/>
+          <parameter key="44" value="2ndFlrSF.true.integer.attribute"/>
+          <parameter key="45" value="LowQualFinSF.true.integer.attribute"/>
+          <parameter key="46" value="GrLivArea.true.integer.attribute"/>
+          <parameter key="47" value="BsmtFullBath.true.integer.attribute"/>
+          <parameter key="48" value="BsmtHalfBath.true.integer.attribute"/>
+          <parameter key="49" value="FullBath.true.integer.attribute"/>
+          <parameter key="50" value="HalfBath.true.integer.attribute"/>
+          <parameter key="51" value="BedroomAbvGr.true.integer.attribute"/>
+          <parameter key="52" value="KitchenAbvGr.true.integer.attribute"/>
+          <parameter key="53" value="KitchenQual.true.polynominal.attribute"/>
+          <parameter key="54" value="TotRmsAbvGrd.true.integer.attribute"/>
+          <parameter key="55" value="Functional.true.polynominal.attribute"/>
+          <parameter key="56" value="Fireplaces.true.integer.attribute"/>
+          <parameter key="57" value="FireplaceQu.true.polynominal.attribute"/>
+          <parameter key="58" value="GarageType.true.polynominal.attribute"/>
+          <parameter key="59" value="GarageYrBlt.true.polynominal.attribute"/>
+          <parameter key="60" value="GarageFinish.true.polynominal.attribute"/>
+          <parameter key="61" value="GarageCars.true.integer.attribute"/>
+          <parameter key="62" value="GarageArea.true.integer.attribute"/>
+          <parameter key="63" value="GarageQual.true.polynominal.attribute"/>
+          <parameter key="64" value="GarageCond.true.polynominal.attribute"/>
+          <parameter key="65" value="PavedDrive.true.polynominal.attribute"/>
+          <parameter key="66" value="WoodDeckSF.true.integer.attribute"/>
+          <parameter key="67" value="OpenPorchSF.true.integer.attribute"/>
+          <parameter key="68" value="EnclosedPorch.true.integer.attribute"/>
+          <parameter key="69" value="3SsnPorch.true.integer.attribute"/>
+          <parameter key="70" value="ScreenPorch.true.integer.attribute"/>
+          <parameter key="71" value="PoolArea.true.integer.attribute"/>
+          <parameter key="72" value="PoolQC.true.polynominal.attribute"/>
+          <parameter key="73" value="Fence.true.polynominal.attribute"/>
+          <parameter key="74" value="MiscFeature.true.polynominal.attribute"/>
+          <parameter key="75" value="MiscVal.true.integer.attribute"/>
+          <parameter key="76" value="MoSold.true.integer.attribute"/>
+          <parameter key="77" value="YrSold.true.integer.attribute"/>
+          <parameter key="78" value="SaleType.true.polynominal.attribute"/>
+          <parameter key="79" value="SaleCondition.true.polynominal.attribute"/>
+          <parameter key="80" value="SalePrice.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.7.001" expanded="true" height="103" name="Multiply (4)" width="90" x="246" y="748"/>
+      <operator activated="true" class="text:data_to_json" compatibility="9.3.001" expanded="true" height="82" name="Data To JSON (4)" width="90" x="380" y="799">
+        <parameter key="ignore_arrays" value="false"/>
+        <parameter key="generate_array" value="false"/>
+        <parameter key="include_missing_values" value="false"/>
+      </operator>
+      <operator activated="true" class="nosql:mongodb_document_writer" compatibility="9.6.000" expanded="true" height="103" name="Write MongoDB (4)" width="90" x="514" y="799">
+        <parameter key="connection_source" value="repository"/>
+        <parameter key="connection_entry" value="/Connections/train1"/>
+        <parameter key="write_concern_" value="Acknowledged"/>
+        <parameter key="write_concern" value="Acknowledged"/>
+        <parameter key="collection" value="train"/>
+        <parameter key="skip_invalid_documents" value="false"/>
+      </operator>
+      <operator activated="true" class="jdbc_connectors:write_database" compatibility="9.7.001" expanded="true" height="82" name="Write Database (4)" width="90" x="514" y="697">
+        <parameter key="define_connection" value="repository"/>
+        <parameter key="connection_entry" value="/Connections/train"/>
+        <parameter key="database_system" value="MySQL"/>
+        <parameter key="use_default_schema" value="true"/>
+        <parameter key="table_name" value="train"/>
+        <parameter key="overwrite_mode" value="none"/>
+        <parameter key="set_default_varchar_length" value="false"/>
+        <parameter key="default_varchar_length" value="128"/>
+        <parameter key="add_generated_primary_keys" value="false"/>
+        <parameter key="db_key_attribute_name" value="generated_primary_key"/>
+        <parameter key="batch_size" value="100"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Gradient Boosted Trees" to_port="training set"/>
+      <connect from_op="Gradient Boosted Trees" from_port="model" to_op="Apply Model Gradient Bosted" to_port="model"/>
+      <connect from_op="Read CSV (2)" from_port="output" to_op="Apply Model Gradient Bosted" to_port="unlabelled data"/>
+      <connect from_op="Apply Model Gradient Bosted" from_port="labelled data" to_op="Multiply" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Data To JSON (3)" to_port="example set 1"/>
+      <connect from_op="Multiply" from_port="output 2" to_op="Write Database" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 3" to_op="Write CSV" to_port="input"/>
+      <connect from_op="Write Database" from_port="through" to_port="result 1"/>
+      <connect from_op="Data To JSON (3)" from_port="documents" to_op="Write MongoDB" to_port="documents 1"/>
+      <connect from_op="Read CSV (3)" from_port="output" to_op="Generalized Linear Model (2)" to_port="training set"/>
+      <connect from_op="Generalized Linear Model (2)" from_port="model" to_op="Apply Model Generalizaed Linear" to_port="model"/>
+      <connect from_op="Read CSV (4)" from_port="output" to_op="Apply Model Generalizaed Linear" to_port="unlabelled data"/>
+      <connect from_op="Apply Model Generalizaed Linear" from_port="labelled data" to_op="Multiply (2)" to_port="input"/>
+      <connect from_op="Multiply (2)" from_port="output 1" to_op="Data To JSON (2)" to_port="example set 1"/>
+      <connect from_op="Multiply (2)" from_port="output 2" to_op="Write Database (2)" to_port="input"/>
+      <connect from_op="Multiply (2)" from_port="output 3" to_op="Write CSV (2)" to_port="input"/>
+      <connect from_op="Write Database (2)" from_port="through" to_port="result 2"/>
+      <connect from_op="Data To JSON (2)" from_port="documents" to_op="Write MongoDB (2)" to_port="documents 1"/>
+      <connect from_op="Read CSV (5)" from_port="output" to_op="Deep Learning" to_port="training set"/>
+      <connect from_op="Deep Learning" from_port="model" to_op="Apply Model Deep Learning" to_port="model"/>
+      <connect from_op="Read CSV (6)" from_port="output" to_op="Apply Model Deep Learning" to_port="unlabelled data"/>
+      <connect from_op="Apply Model Deep Learning" from_port="labelled data" to_op="Multiply (3)" to_port="input"/>
+      <connect from_op="Multiply (3)" from_port="output 1" to_op="Data To JSON" to_port="example set 1"/>
+      <connect from_op="Multiply (3)" from_port="output 2" to_op="Write Database (3)" to_port="input"/>
+      <connect from_op="Multiply (3)" from_port="output 3" to_op="Write CSV (3)" to_port="input"/>
+      <connect from_op="Write Database (3)" from_port="through" to_port="result 3"/>
+      <connect from_op="Data To JSON" from_port="documents" to_op="Write MongoDB (3)" to_port="documents 1"/>
+      <connect from_op="Read CSV (7)" from_port="output" to_op="Multiply (4)" to_port="input"/>
+      <connect from_op="Multiply (4)" from_port="output 1" to_op="Write Database (4)" to_port="input"/>
+      <connect from_op="Multiply (4)" from_port="output 2" to_op="Data To JSON (4)" to_port="example set 1"/>
+      <connect from_op="Data To JSON (4)" from_port="documents" to_op="Write MongoDB (4)" to_port="documents 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+    </process>
+  </operator>
+</process>
